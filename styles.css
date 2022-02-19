@@ -41,6 +41,11 @@ a:hover{
     border-radius: 50px;
 }
 
+#nav-col{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .collumn{
     margin: 10px;
 }
@@ -49,6 +54,7 @@ a:hover{
     border: 1px solid black;
     width: 100%;
     height: 50%;
+    
 }
 
 
@@ -58,16 +64,19 @@ a:hover{
     margin-right: 0%;
     border: 1px solid black;
     width: 100%;
-    height: 500px;
+    height: 800px;
 }
 
 
 #footer-col{
     border: 1px solid black;
     clear: both;
-    height: 80px;
+    height: 400px;
     width: 100%;
     margin-left: 0%;
     margin-right: 0%;
 }
 
+.home-p{
+    margin-left: 5%;
+}
