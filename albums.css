@@ -9,7 +9,7 @@ body{
     font-size: 16px;
     line-height: 1.5;
     color: #333;
-    background-color: bisque;
+    background: white;
 }
 
 ul{
@@ -62,52 +62,29 @@ ul{
     padding: 0 30px;
 }
 
-header{
-
-}
-
-header .container{
-    display: flex;
-    margin: 10px;
-    background-color: aliceblue;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
-}
-
 section .container{
     display: flex;
-    flex-wrap: wrap;
+    background-color: white;
+    background-image: url("./images/the_lost_tape.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    flex-direction: column;
+    align-items: center;
 
 }
 
-section .column{
+section .album{
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 10px;
-    width: 45%;
-    background-color: aliceblue;
+    background-color: black;
+    color: white;
+    opacity: 0.9;
+    width: 400px;
     height: 400px;
 }
 
-#left-column1{
-    background-image: url("./images/NAS-1994.jpeg");
-    background-size: cover;
+section img{
+    width: 400px;
+    height: 400px;
 }
-
-#right-column{
-    justify-content: start;
-    align-items: flex-start;
-}
-
-#left-column2{
-    justify-content: start;
-    align-items: flex-start;
-}
-
-#right-column2{
-    background-image: url("./images/NASIR.png");
-    background-size: cover;
-}
-

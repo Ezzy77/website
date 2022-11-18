@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NASIR JONES| OFFICIAL WEBSITE</title>
-    <link rel="stylesheet" href="home.css">
+    <title>NASIR JONES | OFFICIAL WEBSITE</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <nav class="nav-bar">
@@ -16,10 +16,10 @@
                     <a href="index.html">HOME</a>
                 </li>
                 <li>
-                    <a href="music.html">MUSICS</a>
+                    <a href="albums.html">ALBUMS</a>
                 </li>
                 <li>
-                    <a href="tour.html">TOURS</a>
+                    <a href="hall_of_fame.html">HALL OF FAME</a>
                 </li>
                 <li>
                     <a href="about.html">ABOUT ME</a>
@@ -28,36 +28,58 @@
         </div>   
     </nav>
     <hr>
-    <section class="header">
-        <div class="container">
-            <div id="side-note">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Praesent sit amet venenatis leo, quis pulvinar elit. Morbi 
-                rhoncus non risus eu blandit. Duis libero erat, porttitor 
-                quis nisl in, tincidunt egestas erat. Morbi ligula leo, 
-                eleifend eu fringilla sed, egestas hendrerit lacus. Aenean 
-                consequat bibendum pharetra. Nam fermentum lorem sit amet 
-                erat tempus condimentum. Donec porta hendrerit egestas. Ut 
-                ut diam sed leo lobortis facilisis at a mauris. Quisque dictum 
-                </p>
-            </div> 
-            <div id="side-img">
-                <img id="profile-photo" src="./images/nasir.jpeg" alt="Nas image profile"> 
-            </div>
+    <section class="section">
+        <div id="left-column" class="container">
+            <div>
+
+                <div class="box">
+                    <h2> Grammy Winner</h2>
+                    <p>
+                      In 2021, Nas album, King's Disease won the The Grammy Award for Best
+                      Rap Album of the year.
+                    </p>
+                  </div>
+
+                  <div class="box">
+                    <h2>Top 5</h2>
+                    <p>
+                      The 1994 debut album, Illmatic, considered for many 
+                      critics as top 5 album of all time in hip-hop history.
+                    </p>
+                  </div>
+
+                  <div class="box">
+                    <h2>
+                      Mass Appeal Records </h2>
+                    <p>
+                      Mass Appeal Records is an American independent record
+                      label founded in 2014. The label is the music division 
+                      of the Mass Appeal Media Group founded by Nas.
+                    </p>
+                  </div>
+           </div>
+            <img src="./images/nasir.jpeg" alt="" />
         </div>
     </section>
-
-    <hr >
+    <hr>
     <footer class="footer">
-        <div id="footer-container">
-            <div id="labels">
-                <h3>label icons and sponsors goes here</h3>
-            </div>
-            <div id="social-media">
-                <p>links to social media goes here, (unordered list)</p>
-            </div>
-        </div>
+        <div class="container">
+            <h2>Sign up for new releases and events</h2>
+            <form action="mudfoot.doc.stu.mmu.ac.uk/node/api/mailinglist" method="post" id="form">
+              <label for="fullname">Full Name</label><br>
+              <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+              <div class="error"></div>
+               <br>
+              <label for="email">Email</label><br>
+              <input type="text" id="email" name="email" placeholder="Enter your email">
+              <div class="error"></div>
+               <br>
+              <input type="submit" id="submit" value="Sign up">
+            </form>
+          </div>
+        </footer>
 
-    </footer>
+        <script src="./form.js"></script>
+
 </body>
 </html>
