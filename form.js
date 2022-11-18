@@ -2,35 +2,39 @@
 let form = document.getElementById("form");
 let fullname = document.getElementById("fullname");
 let email = document.getElementById("email");
+let nameErrorEl = document.getElementById("nameError");
+let emailErrorEl = document.getElementById("emailError");
 
 
-function validateInput(){
 
-    if(fullname.value.trim()===""){
-       onError(fullname,"User Name cannot be empty");
+form.addEventListener("submit", e =>{
+    
+    
+    validateInputs();
+    e.preventDefault();
+})
+
+
+const validateInputs = ()=>{
+    const fullName = fullname.value.trim();
+    const userEmail = email.value.trim();
+
+    let nameReg = /^[a-zA-Z-'. ]+$/;
+    let emailReg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    if( nameReg.test(fullName)===false){
+        let err = "type a valid name";
+        nameErrorEl.innerHTML = err;
     }else{
-        onSuccess(fullname);
+        let success = "valid"
+        nameErrorEl.innerHTML = success;
     }
-    if(email.value.trim()===""){
-        onError(email,"Email cannot be empty");
+
+    if(emailReg.test(userEmail)===false){
+        let err = "Type a valid email";
+        emailErrorEl.innerHTML = err;
     }else{
-        if(!isValidEmail(email.value.trim())){
-            onError(email,"Email is not valid");
-        }else{
-            onSuccess(email);
-        }
+        let success = "Valid"
+        emailErrorEl.innerHTML = success;
     }
-}
-
-document.getElementById("submit")
-submit.addEventListener("click",(event)=>{
-    event.preventDefault();
-    validateInput();
-});
-
-
-
-function isValidEmail(email){
-   return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-}
-
+}  
